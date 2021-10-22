@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Lista Supermercado</title>
+</head>
+<body>
+
+    <header>
+        <div class="background">
+            <h2>Lista de Supermercado</h2>
+        </div>
+        <div class="informacoes">
+            <div class="numero-itens">
+                <p>4</p>
+                <p class="titulo">Itens</p>
+            </div>
+            <div class="valor-total">
+                <p>R$ 100,00</p>
+                <p class="titulo">Total</p>
+            </div>
+        </div>
+
+        
+    </header>
+
+    <section class="sessao-cadastro">
+        <input type="text" name="nome-produto" placeholder="produto">
+        <input type="number" name="preco-produto" placeholder="preço">
+        <input type="number" name="quantidade-produto" placeholder="quantidade">
+        <input type="button" value="Adicionar">
+    </section>
+
+    <div class="span-de-alerta"></div>
+
+
+    
+    <section id="lista">
+        <div id="lista-cabecalho">
+            <p>Item</p>
+            <p>Preço un.</p>
+            <p>Total</p>
+            <p class="qtd">Quantidade</p>
+        </div> 
+ 
+        <div class="lista-body">
+
+            <div class="item-lista">
+                <div class="item-lista-info">
+                    <div class="nome-item"><p>Arroz</p></div>
+                    <div class="preco-item"><p>R$ 4.58</p></div>
+                    <div class="total-item"><p>R$ 9.16</p></div>
+                    <div class="quantidade-item"><p>2</p></div>
+                </div>
+                <input type="button" value="excluir">
+            </div>
+        </div>
+
+        
+    </section>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
