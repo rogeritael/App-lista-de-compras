@@ -1,6 +1,6 @@
 # App lista de compras
 
-!README EM CONSTRUÇÃO
+Aplicação de cadastro de itens em uma lista de compras, desenvolvido com JavaScript utilizando o LocalStorage para armazenar os dados.
 
 ## Tecnologias
 O objetivo desse projeto foi me desafiar a desenvolve-lo utilizando apenas JavaScript puro, sem frameworks, além do HTML e CSS, claro.
