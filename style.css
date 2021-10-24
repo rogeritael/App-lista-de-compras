@@ -196,5 +196,6 @@ div.informacoes {
 
     .item-lista input[type=button] {
         padding: 5px 8px;
+        max-height: 28px;
     }
 }
