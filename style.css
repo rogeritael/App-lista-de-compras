@@ -8,12 +8,19 @@
     font-family: 'open sans', sans-serif;
     outline: none;
     border: none;
+    text-decoration: none;
 }
 
 
 /* header */
 body {
     background-color: rgb(238, 238, 238);
+    /* display: flex;
+    flex-direction: column; */
+}
+
+body, html {
+    height: 100%;
 }
 
 header {
@@ -70,7 +77,6 @@ div.informacoes {
     margin: auto;
     margin-top: 60px;
     display: flex;
-    /* border: 1px solid red; */
 }
 
 .sessao-cadastro input[type=text], .sessao-cadastro input[type=number]{
@@ -102,12 +108,21 @@ div.informacoes {
 }
 
 /* lista de itens */
+.lista-body {
+    border-top: 1px solid rgba(148, 148, 255, 0.6);
+    margin:-10px 10px 0 10px;
+}
+
 #lista {
     width: 80%;
     background-color: white;
-    min-height: 600px;
+    min-height: 200px;
     margin: 50px auto;
     border-radius: 5px;
+}
+
+#tela-view {
+    min-height: calc(100vh - 30px);
 }
 
 #lista-cabecalho {
@@ -119,10 +134,12 @@ div.informacoes {
 #lista-cabecalho p{
     flex: 1;
     font-weight: bold;
+    color: rgb(52, 52, 122);
 }
 
 .item-lista, .item-lista-info {
     display: flex;
+    align-items: center;
 }
 
 .item-lista{
@@ -160,6 +177,26 @@ div.informacoes {
     width: 100%;
     margin: 10px 0;
 }
+
+footer {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+}
+
+footer p{
+    color: rgb(52, 52, 122);
+}
+footer a{
+    font-weight: bold;
+}
+
+.sem-cadastro{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 18px;
+    opacity: 0.4;
+} 
 
 /* Responsivo */
 @media (max-width: 1200px){

@@ -1,6 +1,7 @@
 //inputs
 let inputNome = document.querySelector('input[name=nome-produto]');
 let inputPreco = document.querySelector('input[name=preco-produto]');
+
 let inputQtd = document.querySelector('input[name=quantidade-produto]');
 let btnAdicionar = document.querySelector('.sessao-cadastro input[type=button]');
 
@@ -22,6 +23,14 @@ let tamanhoTela = window.screen.width
 //Funções
 function renderizarTela(){
     Lista.innerHTML = ''
+
+    if(itensCadastrados.length == 0){
+        let pVazio = document.createElement('p')
+        pVazio.setAttribute('class', 'sem-cadastro')
+        pVazio.innerHTML = 'Nenhum item cadastrado'
+        Lista.appendChild(pVazio)
+    }
+    
     itensTotais.innerHTML = itensCadastrados.length
 
     let btnId = 0
@@ -51,7 +60,7 @@ function renderizarTela(){
         let divTotal = document.createElement('div')
             let pTotal = document.createElement('p')
             divTotal.setAttribute('class', 'total-item')
-            pTotal.innerHTML = `R$ ${total}`
+            pTotal.innerHTML = `R$ ${total.toFixed(2)}`
             divTotal.appendChild(pTotal)
         
         let divQtd = document.createElement('div')
@@ -97,6 +106,7 @@ function cadastrarItem(){
         spanAlert.setAttribute('class', 'span-alert')
     let divSpan = document.querySelector('div.span-de-alerta')
     let span = document.querySelector('div.span-de-alerta h2.span-alert')
+    
 
     //condições e verificações de input
     if(inputNome.value == ''  || inputPreco.value == '' || inputQtd.value == ''){
@@ -174,4 +184,9 @@ if (tamanhoTela <= 768){
     let pQuantidade = document.querySelector('#lista-cabecalho p.qtd')
     pQuantidade.innerHTML = 'Qtd'
     pQuantidade.style.flex = 0.5
+
+    let divLista = document.querySelector('#lista')
+    divLista.setAttribute('class', 'lista-mobile')
+} else {
+    divLista.setAttribute('id', 'lista')
 }
